@@ -4,6 +4,13 @@ package CAM::EmailTemplate::SMTP;
 
 CAM::EmailTemplate::SMTP - Net::SMTP based email message sender
 
+=head1 LICENSE
+
+Copyright 2005 Clotho Advanced Media, Inc., <cpan@clotho.com>
+
+This library is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
 =head1 SYNOPSIS
 
   use CAM::EmailTemplate::SMTP;
@@ -27,6 +34,8 @@ executable.
 To accomplish this, the programmer must configure the mailhost before
 attempting to send.
 
+See README for a comparison with other CPAN modules.
+
 =cut
 
 require 5.005_62;
@@ -36,13 +45,12 @@ use CAM::EmailTemplate;
 use Net::SMTP;
 
 our @ISA = qw(CAM::EmailTemplate);
-our $VERSION = '0.20';
+our $VERSION = '0.91';
 
 # Package globals
 
 my $global_mailhost = undef;
 
-#==============================
 
 =head1 FUNCTIONS
 
@@ -50,9 +58,6 @@ my $global_mailhost = undef;
 
 =cut
 
-#==============================
-
-#==============================
 
 =item setHost HOST
 
@@ -83,7 +88,6 @@ sub setHost
    return $pkg_or_self;
 }
 
-#==============================
 
 =item deliver MSG
 
@@ -192,6 +196,6 @@ __END__
 
 =head1 AUTHOR
 
-Chris Dolan, Clotho Advanced Media, I<chris@clotho.com>
+Clotho Advanced Media Inc., I<cpan@clotho.com>
 
-=cut
+Primary developer: Chris Dolan

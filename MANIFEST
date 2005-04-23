@@ -1,7 +1,10 @@
+index.html
 ChangeLog
-COPYRIGHT
+Build.PL
+LICENSE
 Makefile.PL
 MANIFEST
 README
-SMTP.pm
+lib/CAM/EmailTemplate/SMTP.pm
 test.pl
+META.yml

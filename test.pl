@@ -1,15 +1,16 @@
+#!/usr/bin/perl -w
+
+use strict;
+use warnings;
+use Carp;
+$SIG{__WARN__} = $SIG{__DIE__} = \&Carp::croak;
+
 BEGIN
 { 
    use Test::More tests => 3;
-   use_ok(CAM::EmailTemplate::SMTP);
+   use_ok("CAM::EmailTemplate::SMTP");
 }
 
-use strict;
-use strict;
-use warnings;
-
-use Carp;
-$SIG{__WARN__} = \&Carp::croak;
 
 SKIP: {
    if ((!$ENV{RECIPIENT}) || (!$ENV{MAILHOST}))
